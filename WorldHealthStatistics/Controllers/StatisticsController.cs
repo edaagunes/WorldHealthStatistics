@@ -14,9 +14,7 @@ namespace WorldHealthStatistics.Controllers
 
 		public async Task<IActionResult> Index()
 		{
-			var values = await _statisticsRepository.Top10();
-
-			return View(values);
+			return View();
 		}
 	}
 }

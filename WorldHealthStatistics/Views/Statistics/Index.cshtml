@@ -1,24 +1,53 @@
-﻿@model List<ResultStatisticsDto>
+﻿
 @{
     Layout = null;
 }
 
-<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+    #bannerClose {
+        display: none !important;
+    }
 
-<div class="container">
-    <br /><br />
-    <table class="table table-bordered">
-        <tr>
-            <th>Ülke</th>
-            <th>Yıl</th>
+    .nav-search .form-control {
+        width: 300px !important;
+    }
 
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Country</td>
-                <td>@item.Year</td>
-            </tr>
-        }
-    </table>
-</div>
+    .nav-search {
+        position: relative !important; 
+        right: -170px !important; 
+    }
+</style>
+
+@await Component.InvokeAsync("_HeadLayout")
+
+<body>
+
+    <i class="" id="bannerClose"></i>
+ 
+    <div class="container-scroller">
+
+		@await Component.InvokeAsync("_NavbarLayout")
+
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel">
+                <div class="content-wrapper">
+
+                    @await Component.InvokeAsync("_StatusStatistics")
+
+                    @await Component.InvokeAsync("_GraphicStatistics")
+
+                    @await Component.InvokeAsync("_CardStatistics")
+
+                    @await Component.InvokeAsync("_TableStatistics")
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("_ScriptsLayout")
+
+</body>
+
+
+
