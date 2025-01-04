@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WorldHealthStatistics.Dtos;
 using WorldHealthStatistics.Repositories;
 
 namespace WorldHealthStatistics.Controllers
@@ -16,5 +17,6 @@ namespace WorldHealthStatistics.Controllers
 		{
 			return View();
 		}
+
 	}
 }

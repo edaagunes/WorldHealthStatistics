@@ -2,8 +2,8 @@
 
 namespace WorldHealthStatistics.Dtos
 {
-	public class ResultStatisticsDto
-	{
+    public class ResultStatisticsDto
+    {
         public string Country { get; set; }
         public int Year { get; set; }
         public string DiseaseName { get; set; }
@@ -26,6 +26,14 @@ namespace WorldHealthStatistics.Dtos
         public decimal PerCapitaIncome { get; set; }
         public decimal EducationIndex { get; set; }
         public decimal UrbanizationRate { get; set; }
+
+		// Sorgular için takma isim alanları
+		public decimal AveragePrevalenceRate { get; set; }
+		public decimal MaxDoctorsPer1000 { get; set; }
+		public decimal AvgRecoveryRate { get; set; }
+		public decimal AvgEducationIndex { get; set; }
+
+		public decimal AvgPrevalenceRate { get; set; }
 
 	}
 }
