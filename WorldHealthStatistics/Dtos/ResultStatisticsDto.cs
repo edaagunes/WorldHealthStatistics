@@ -32,8 +32,13 @@ namespace WorldHealthStatistics.Dtos
 		public decimal MaxDoctorsPer1000 { get; set; }
 		public decimal AvgRecoveryRate { get; set; }
 		public decimal AvgEducationIndex { get; set; }
-
 		public decimal AvgPrevalenceRate { get; set; }
+		public decimal AvgMortalityRate { get; set; }
+		public decimal AvgUrbanizationRate { get; set; }
+		public decimal AvgTreatmentCost { get; set; }
+		public decimal Frequency { get; set; }
+		public decimal AvgCostOfHiv { get; set; }
+		public decimal TotalAffected { get; set; }
 
 	}
 }

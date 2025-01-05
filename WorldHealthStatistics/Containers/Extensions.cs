@@ -8,7 +8,7 @@ namespace WorldHealthStatistics.Containers
 		public static void ContainerDependencies(this IServiceCollection services)
 		{
 			services.AddScoped<HealthContext>();
-			services.AddScoped<IStatisticsRepository, StatisticsRepository>();
+			services.AddScoped<IStatusStatisticsRepository, StatusStatisticsRepository>();
 		}
 	}
 }

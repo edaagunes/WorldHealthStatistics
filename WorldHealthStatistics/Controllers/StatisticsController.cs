@@ -6,9 +6,9 @@ namespace WorldHealthStatistics.Controllers
 {
 	public class StatisticsController : Controller
 	{
-		private readonly IStatisticsRepository _statisticsRepository;
+		private readonly IStatusStatisticsRepository _statisticsRepository;
 
-		public StatisticsController(IStatisticsRepository statisticsRepository)
+		public StatisticsController(IStatusStatisticsRepository statisticsRepository)
 		{
 			_statisticsRepository = statisticsRepository;
 		}

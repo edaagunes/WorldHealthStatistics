@@ -9,5 +9,9 @@ namespace WorldHealthStatistics.Models.StatisticsViewModel
 		public List<ResultStatisticsDto> RecoveryRate { get; set; }
 		public ResultStatisticsDto FemaleMostCommonDiseases { get; set; }
 		public ResultStatisticsDto MaleMostCommonDiseases { get; set; }
+		public ResultStatisticsDto MostCommonDiseaseInWorld { get; set; }
+		public ResultStatisticsDto LeastCommonDiseaseInWorldWithCost { get; set; }
+		public List<ResultStatisticsDto> MostCommonDiseaseCategoryInWorldWithUrbanization { get; set; }
+		public ResultStatisticsDto MostCommonDiseasesByWorldWithAgeGroup { get; set; }
 	}
 }

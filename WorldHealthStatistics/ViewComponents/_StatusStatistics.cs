@@ -7,9 +7,9 @@ namespace WorldHealthStatistics.ViewComponents
 {
 	public class _StatusStatistics : ViewComponent
 	{
-		private readonly IStatisticsRepository _statisticsRepository;
+		private readonly IStatusStatisticsRepository _statisticsRepository;
 
-		public _StatusStatistics(IStatisticsRepository statisticsRepository)
+		public _StatusStatistics(IStatusStatisticsRepository statisticsRepository)
 		{
 			_statisticsRepository = statisticsRepository;
 		}
@@ -23,13 +23,27 @@ namespace WorldHealthStatistics.ViewComponents
 
 			var mostCommonDiseases = await _statisticsRepository.GetMostCommonDiseasesByGender();
 
+			var mostCommonDiseaseInWorld = await _statisticsRepository.GetMostCommonDiseasesByWorld();
+
+			var leastCommonDiseaseInWorldWithCost = await _statisticsRepository.GetLeastCommonDiseasesByWorldWithCost();
+
+			var mostCommonDiseaseCategoryInWorldWithUrbanization = await _statisticsRepository.GetMostCommonDiseaseCategoryByWorldWithUrbanization();
+
+			var mostCommonDiseasesByWorldWithAgeGroup = await _statisticsRepository.GetMostCommonDiseasesByWorldWithAgeGroup();
+
+
+
 			var viewModel = new StatusStatisticsViewModel
 			{
 				MostCommonDisease = mostCommonDisease,
 				TopDoctorCount = topDoctorCount,
 				RecoveryRate = recoveryRate,
 				FemaleMostCommonDiseases = mostCommonDiseases.FemaleMostCommonDiseases,
-				MaleMostCommonDiseases = mostCommonDiseases.MaleMostCommonDiseases
+				MaleMostCommonDiseases = mostCommonDiseases.MaleMostCommonDiseases,
+				MostCommonDiseaseInWorld= mostCommonDiseaseInWorld,
+				LeastCommonDiseaseInWorldWithCost=leastCommonDiseaseInWorldWithCost,
+				MostCommonDiseaseCategoryInWorldWithUrbanization=mostCommonDiseaseCategoryInWorldWithUrbanization,
+				MostCommonDiseasesByWorldWithAgeGroup = mostCommonDiseasesByWorldWithAgeGroup
 			};
 			return View(viewModel); 
 		}
