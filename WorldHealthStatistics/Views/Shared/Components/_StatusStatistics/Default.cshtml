@@ -8,6 +8,7 @@
 		{ "Diabetes", "Diyabet" },
 		{ "Cholera", "Kolera" },
         { "Hypertension", "Hipertansiyon" },
+        { "Dengue", "Dang Humması" }
 	};
 
     // Tedavi isimleri için çeviri sözlüğü
@@ -31,7 +32,7 @@
         treatmentDictionary.ContainsKey(treatmentName) ? treatmentDictionary[treatmentName] : treatmentName;
         
     Func<string, string> TranslateCategoryName = (string categoryName) =>
-        treatmentDictionary.ContainsKey(categoryName) ? categoryDictionary[categoryName] : categoryName;
+        categoryDictionary.ContainsKey(categoryName) ? categoryDictionary[categoryName] : categoryName;
 }
 
 <link href="https://cdn.jsdelivr.net/npm/@@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
@@ -62,13 +63,14 @@
                                 <h6 class="mb-0">(@Model.TopDoctorCount.Year Yılı) - 1000 Kişi Başına : @Model.TopDoctorCount.MaxDoctorsPer1000</h6>
                             </div>
                         </div>
+                        <br />
                         <canvas id="sales-chart-a" class="mt-auto" height="65"></canvas>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row h-100">
-            <div class="col-md-6 stretch-card grid-margin grid-margin-md-0">
+            <div class="col-md-6 grid-margin grid-margin-md-0">
                 <div class="card">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <p class="text-muted">En Yüksek İyileşme Oranı(>60) ve Eğitim Endeksi(>0.5) İlişkisi</p>
@@ -79,12 +81,13 @@
                                 <h6 class="mb-0" style="font-size: 1.1rem; color: #666;">@item.AvgRecoveryRate.ToString("0.00") - @item.AvgEducationIndex.ToString("0.00")</h6>
                             </div>
                         }
+                        <br />
                         <canvas id="sales-chart-b" class="mt-auto" height="38"></canvas>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 stretch-card">
+            <div class="col-md-6 ">
                 <div class="card">
                     <div class="card-body">
                         <div class="row h-100">
@@ -94,6 +97,7 @@
                                 <h5 class="mb-0" style="font-weight: bold; color: #333;"> @TranslateDiseaseName(Model.FemaleMostCommonDiseases.DiseaseName)</h5>
                                 <br />
                                 <h6 class="mb-0" style="font-size: 1.1rem; color: #666;"> @Model.FemaleMostCommonDiseases.AvgPrevalenceRate.ToString("0.##")%</h6>
+                                <br />
                                 <canvas id="cpu-chart" class="mt-auto"></canvas>
                             </div>
 
@@ -103,6 +107,7 @@
                                 <h5 class="mb-0" style="font-weight: bold; color: #333;"> @TranslateDiseaseName(Model.MaleMostCommonDiseases.DiseaseName)</h5>
                                 <br />
                                 <h6 class="mb-0" style="font-size: 1.1rem; color: #666;"> @Model.MaleMostCommonDiseases.AvgPrevalenceRate.ToString("0.##")%</h6>
+                                <br />
                                 <canvas id="memory-chart" class="mt-auto"></canvas>
                             </div>
                         </div>
@@ -121,8 +126,9 @@
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <p class="mb-0 text-muted">Dünyada En Çok Görülen Hastalık</p>
-                            <i class="mdi mdi-heart text-muted"></i>
+                            <i class="mdi mdi-magnify-plus text-muted"></i>
                         </div>
+                        <br />
                         <h5 class="mb-0" style="font-weight: bold; color: #333;">@TranslateDiseaseName(Model.MostCommonDiseaseInWorld.DiseaseName)</h5>
                         <br />
                         <h6 class="mb-0" style="font-size: 1.1rem; color: #666;">Vaka Sayısı : @Model.MostCommonDiseaseInWorld.Frequency</h6>
@@ -136,19 +142,20 @@
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <p class="mb-0 text-muted">Dünyada En Az Görülen Hastalık</p>
-                            <i class="mdi mdi-heart text-muted"></i>
+                            <i class="mdi mdi-magnify-minus text-muted"></i>
                         </div>
+                        <br />
                         <h5 class="mb-0" style="font-weight: bold; color: #333;">@TranslateDiseaseName(Model.LeastCommonDiseaseInWorldWithCost.DiseaseName)</h5>
                         <br />
-                        <h6 class="mb-0" style="font-size: 1.1rem; color: #666;">Ortalama İyileşme Maliyeti : @Model.LeastCommonDiseaseInWorldWithCost.AvgTreatmentCost.ToString("N2") $</h6>
+                        <h6 class="mb-0" style="font-size: 1.1rem; color: #666;">Ortalama İyileşme Maliyeti : </h6>
                         <br />
-                        <h6 class="mb-0" style="font-size: 1.1rem; color: #666;"></h6>
+                        <h6 class="mb-0" style="font-size: 1.1rem; color: #666;">@Model.LeastCommonDiseaseInWorldWithCost.AvgTreatmentCost.ToString("N2") $</h6>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-lg-6 grid-margin stretch-card">
+            <div class="col-md-8 col-lg-6 grid-margin">
                 <div class="card">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div class="d-flex justify-content-between align-items-center mb-2">
@@ -158,21 +165,28 @@
                         <br />
                         @foreach (var item in Model.MostCommonDiseaseCategoryInWorldWithUrbanization)
                         {
-                            <h6 class="mb-0" style="font-weight: bold; color: #333;">@TranslateCategoryName(item.DiseaseCategory) Hastalıklar - Ölüm Oranı : @item.AvgMortalityRate.ToString("0.##")%</h6>
+                            <h5 class="mb-0" style="font-weight: bold; color: #333;">@TranslateCategoryName(item.DiseaseCategory) Hastalıklar </h5>
+                            <br />
+                            <h6 class="mb-0" style="font-weight: bold; color: #666;">Ölüm Oranı : @item.AvgMortalityRate.ToString("0.##")%</h6>
                             <br />
                         }
-                        <br /><br />
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 col-lg-6 grid-margin stretch-card">
+            <div class="col-md-8 col-lg-6">
                 <div class="card">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <p class="mb-0 text-muted">0-18 Yaş Grubunda En Sık Görülen Hastalık</p>
+                            <p class="mb-0 text-muted">Dünyada Yaş Gruplarında En Sık Görülen Hastalıklar</p>
                             <i class="mdi mdi-percent text-muted"></i>
                         </div>
-                        <h5 class="mb-0" style="font-weight: bold; color: #333;">@TranslateDiseaseName(Model.MostCommonDiseasesByWorldWithAgeGroup.DiseaseName)</h5>
+                        <br />
+                        @foreach (var item in Model.MostCommonDiseasesByAgeGroup)
+                        {
+                            <h5 class="mb-0" style="font-weight: bold; color: #666;"><strong style="font-weight: bold; color: #333;">@TranslateDiseaseName(item.DiseaseName)</strong> &nbsp;(@item.AgeGroup)</h5>
+                            <br /> 
+                        }
+                        <br /><br /><br>
                     </div>
                 </div>
             </div>

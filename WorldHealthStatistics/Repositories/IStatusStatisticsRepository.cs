@@ -13,5 +13,6 @@ namespace WorldHealthStatistics.Repositories
 		Task<ResultStatisticsDto> GetLeastCommonDiseasesByWorldWithCost();
 		Task<List<ResultStatisticsDto>> GetMostCommonDiseaseCategoryByWorldWithUrbanization();
 		Task<ResultStatisticsDto> GetMostCommonDiseasesByWorldWithAgeGroup();
+		Task<List<ResultStatisticsDto>> GetMostCommonDiseasesByAgeGroup();
 	}
 }
