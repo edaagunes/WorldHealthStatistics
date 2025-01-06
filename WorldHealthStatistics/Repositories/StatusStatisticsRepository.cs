@@ -141,5 +141,6 @@ namespace WorldHealthStatistics.Repositories
 			var result = await _connection.QueryAsync<ResultStatisticsDto>(query);
 			return result.ToList();
 		}
+
 	}
 }

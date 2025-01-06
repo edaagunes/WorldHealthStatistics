@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol.Core.Types;
 using WorldHealthStatistics.Dtos;
 using WorldHealthStatistics.Models.StatisticsViewModel;
 using WorldHealthStatistics.Repositories;
@@ -13,7 +14,7 @@ namespace WorldHealthStatistics.ViewComponents
 		{
 			_statisticsRepository = statisticsRepository;
 		}
-		public async Task<IViewComponentResult> InvokeAsync()
+		public async Task<IViewComponentResult> InvokeAsync(string query = null)
 		{
 			var mostCommonDisease = await _statisticsRepository.GetMostCommonDiseaseInTurkey();
 
@@ -31,6 +32,7 @@ namespace WorldHealthStatistics.ViewComponents
 
 			var mostCommonDiseasesByAgeGroup = await _statisticsRepository.GetMostCommonDiseasesByAgeGroup();
 
+
 			var viewModel = new StatusStatisticsViewModel
 			{
 				MostCommonDisease = mostCommonDisease,
@@ -45,5 +47,7 @@ namespace WorldHealthStatistics.ViewComponents
 			};
 			return View(viewModel); 
 		}
+
+		
 	}
 }

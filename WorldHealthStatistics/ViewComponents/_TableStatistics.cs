@@ -13,7 +13,7 @@ namespace WorldHealthStatistics.ViewComponents
 			_tableStatisticsRepository = tableStatisticsRepository;
 		}
 
-		public async Task<IViewComponentResult> InvokeAsync(int pageNumber = 1, int pageSize = 10)
+		public async Task<IViewComponentResult> InvokeAsync(string query, int pageNumber = 1, int pageSize = 10)
 		{
 			//var totalAffected = await _tableStatisticsRepository.GetTotalAffectedPopulation(pageNumber, pageSize);
 

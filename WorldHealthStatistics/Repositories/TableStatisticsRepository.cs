@@ -40,5 +40,7 @@ namespace WorldHealthStatistics.Repositories
 
 			return result.ToList().ToPagedList(pageNumber, pageSize);
 		}
+
+		
 	}
 }

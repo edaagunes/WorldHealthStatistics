@@ -18,7 +18,9 @@ namespace WorldHealthStatistics.Controllers
 
 		public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 10)
 		{
+
 			var totalAffected = await _tableStatisticsRepository.GetTotalAffectedPopulation(pageNumber, pageSize);
+
 
 			var viewModel = new TableStatisticsViewModel
 			{

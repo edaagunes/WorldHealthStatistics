@@ -1,4 +1,5 @@
 ﻿using WorldHealthStatistics.Dtos;
+using WorldHealthStatistics.ViewComponents;
 using X.PagedList;
 
 namespace WorldHealthStatistics.Repositories

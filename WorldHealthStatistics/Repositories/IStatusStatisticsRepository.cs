@@ -1,5 +1,6 @@
 ﻿using WorldHealthStatistics.Dtos;
 using WorldHealthStatistics.Models.StatisticsViewModel;
+using WorldHealthStatistics.ViewComponents;
 
 namespace WorldHealthStatistics.Repositories
 {
