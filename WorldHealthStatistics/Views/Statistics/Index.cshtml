@@ -36,9 +36,9 @@
 
                     @await Component.InvokeAsync("_GraphicStatistics")
 
-                    @await Component.InvokeAsync("_CardStatistics")
+                  @*   @await Component.InvokeAsync("_CardStatistics") *@
 
-                    @await Component.InvokeAsync("_TableStatistics")
+                    @await Component.InvokeAsync("_TableStatistics", new { pageNumber = 1, pageSize = 10 })
 
                 </div>
             </div>

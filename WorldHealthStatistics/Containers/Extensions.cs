@@ -11,6 +11,7 @@ namespace WorldHealthStatistics.Containers
 
 			services.AddScoped<IStatusStatisticsRepository, StatusStatisticsRepository>();
 			services.AddScoped<IGraphicStatisticsRepository, GraphicStatisticsRepository>();
+			services.AddScoped<ITableStatisticsRepository, TableStatisticsRepository>();
 		}
 	}
 }
