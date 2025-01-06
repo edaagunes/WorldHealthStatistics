@@ -1,141 +1,335 @@
-﻿   <div class="row">
-                        <div class="col-xl-4 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body border-bottom">
-                                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                        <h6 class="mb-2 mb-md-0 text-uppercase font-weight-medium">Overall sales</h6>
-                                        <div class="dropdown">
-                                            <button class="btn bg-white p-0 pb-1 text-muted btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Last 30 days
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
-                                                <h6 class="dropdown-header">Settings</h6>
-                                                <a class="dropdown-item" href="javascript:;">Action</a>
-                                                <a class="dropdown-item" href="javascript:;">Another action</a>
-                                                <a class="dropdown-item" href="javascript:;">Something else here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="javascript:;">Separated link</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="sales-chart-c" class="mt-2"></canvas>
-                                    <div class="d-flex align-items-center justify-content-between border-bottom pb-3 mb-3 mt-4">
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <p class="text-muted">Gross Sales</p>
-                                            <h5>492</h5>
-                                            <div class="d-flex align-items-baseline">
-                                                <p class="text-success mb-0">0.5%</p>
-                                                <i class="typcn typcn-arrow-up-thick text-success"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <p class="text-muted">Purchases</p>
-                                            <h5>87k</h5>
-                                            <div class="d-flex align-items-baseline">
-                                                <p class="text-success mb-0">0.8%</p>
-                                                <i class="typcn typcn-arrow-up-thick text-success"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <p class="text-muted">Tax Return</p>
-                                            <h5>882</h5>
-                                            <div class="d-flex align-items-baseline">
-                                                <p class="text-danger mb-0">-04%</p>
-                                                <i class="typcn typcn-arrow-down-thick text-danger"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="dropdown">
-                                            <button class="btn bg-white p-0 pb-1 pt-1 text-muted btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Last 7 days
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
-                                                <h6 class="dropdown-header">Settings</h6>
-                                                <a class="dropdown-item" href="javascript:;">Action</a>
-                                                <a class="dropdown-item" href="javascript:;">Another action</a>
-                                                <a class="dropdown-item" href="javascript:;">Something else here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="javascript:;">Separated link</a>
-                                            </div>
-                                        </div>
-                                        <p class="mb-0">overview</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-4 grid-margin stretch-card">
-                            <div class="row">
-                                <div class="col-md-12 grid-margin stretch-card">
-                                    <div class="card newsletter-card bg-gradient-warning">
-                                        <div class="card-body">
-                                            <div class="d-flex flex-column align-items-center justify-content-center h-100">
-                                                <h5 class="mb-3 text-white">Newsletter</h5>
-                                                <form class="form d-flex flex-column align-items-center justify-content-between w-100">
-                                                    <div class="form-group mb-2 w-100">
-                                                        <input type="text" class="form-control" placeholder="email address">
-                                                    </div>
-                                                    <button class="btn btn-danger btn-rounded mt-1" type="submit">Subscribe</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 stretch-card">
-                                    <div class="card profile-card bg-gradient-primary">
-                                        <div class="card-body">
-                                            <div class="row align-items-center h-100">
-                                                <div class="col-md-4">
-                                                    <figure class="avatar mx-auto mb-4 mb-md-0">
-                                                        <img src="~/admin-template/template/images/faces/face20.jpg" alt="avatar">
-                                                    </figure>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h5 class="text-white text-center text-md-left">Phoebe Kennedy</h5>
-                                                    <p class="text-white text-center text-md-left">kennedy@gmail.com</p>
-                                                    <div class="d-flex align-items-center justify-content-between info pt-2">
-                                                        <div>
-                                                            <p class="text-white font-weight-bold">Birth date</p>
-                                                            <p class="text-white font-weight-bold">Birth city</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="text-white">16 Sep 2019</p>
-                                                            <p class="text-white">Netherlands</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-4 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body border-bottom">
-                                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                        <h6 class="mb-2 mb-md-0 text-uppercase font-weight-medium">Sales statistics</h6>
-                                        <div class="dropdown">
-                                            <button class="btn bg-white p-0 pb-1 text-muted btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Last 7 days
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton4">
-                                                <h6 class="dropdown-header">Settings</h6>
-                                                <a class="dropdown-item" href="javascript:;">Action</a>
-                                                <a class="dropdown-item" href="javascript:;">Another action</a>
-                                                <a class="dropdown-item" href="javascript:;">Something else here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="javascript:;">Separated link</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="sales-chart-d" height="320"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+﻿@model GraphicStatisticsViewModel
+
+<div class="row">
+	<div class="col-xl-4 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body border-bottom">
+				<div class="d-flex justify-content-between align-items-center flex-wrap">
+					<h6 class="mb-2 mb-md-0 text-uppercase font-weight-medium">Dİyabet Hastalığının En Sık Görüldüğü Ülkeler</h6>
+				</div>
+			</div>
+			<div class="card-body">
+				<canvas id="country-chart" class="mt-2"></canvas>
+				<div class="d-flex align-items-center justify-content-between border-bottom pb-3 mb-3 mt-4">
+					<div class="d-flex flex-column justify-content-center align-items-center">
+						<p class="text-muted"></p>
+						<h5></h5>
+						<div class="d-flex align-items-baseline">
+							<p class="text-success mb-0"></p>
+							<i class=""></i>
+						</div>
+					</div>
+					<div class="d-flex flex-column justify-content-center align-items-center">
+						<p class="text-muted"></p>
+						<h5></h5>
+						<div class="d-flex align-items-baseline">
+							<p class="text-success mb-0"></p>
+							<i class=""></i>
+						</div>
+					</div>
+					<div class="d-flex flex-column justify-content-center align-items-center">
+						<p class="text-muted"></p>
+						<h5></h5>
+						<div class="d-flex align-items-baseline">
+							<p class="text-danger mb-0"></p>
+							<i class=""></i>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex justify-content-between align-items-center">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 col-xl-4 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body border-bottom">
+				<div class="d-flex justify-content-between align-items-center flex-wrap">
+					<h6 class="mb-2 mb-md-0 text-uppercase font-weight-medium">Türkiyede Son 5 Yılda En Çok Görülen Hastalıklar</h6>
+				</div>
+			</div>
+			<div class="card-body">
+				<canvas id="lastdiseases-chart" height="320"></canvas>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 col-xl-4 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body border-bottom">
+				<div class="d-flex justify-content-between align-items-center flex-wrap">
+					<h6 class="mb-2 mb-md-0 text-uppercase font-weight-medium">Sales statistics</h6>
+				</div>
+			</div>
+			<div class="card-body">
+				<canvas id="lastyeardiseases-chart" height="320"></canvas>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+	// Razor ile server'dan gelen verileri JavaScript'e aktarıyoruz.
+	var diabetesData = @Html.Raw(Json.Serialize(Model.CommonCountryByDiabetes));
+
+	var countryTranslations = {
+		"USA": "ABD",
+		"Canada": "Kanada",
+		"Germany": "Almanya",
+		"India": "Hindistan",
+		"Mexico": "Meksika",
+		"South Africa": "Güney Afrika",
+		"Japan": "Japonya",
+		"Russia": "Rusya",
+		"Italy": "İtalya",
+		"South Korea": "Güney Kore",
+	};
+
+	// Veri ile chart'ı güncelliyoruz.
+	var countries = diabetesData.map(x => countryTranslations[x.country] || x.country); // Ülkeler
+	var prevalenceRates = diabetesData.map(x => x.totalPrevalenceRate);  // Prevalans oranları
+
+	// Pastel renk oluşturma fonksiyonu
+	function getPastelColor() {
+		var r = Math.floor(Math.random() * 128 + 127); // 127 ile 255 arasında kırmızı
+		var g = Math.floor(Math.random() * 128 + 127); // 127 ile 255 arasında yeşil
+		var b = Math.floor(Math.random() * 128 + 127); // 127 ile 255 arasında mavi
+		return `rgb(${r}, ${g}, ${b})`;  // RGB formatında renk döndürülür
+	}
+
+	// Ülkeler için pastel renkler
+	var colors = countries.map(function() {
+		return getPastelColor();
+	});
+
+	// Eğer chart mevcutsa güncelliyoruz
+	if ($("#country-chart").length) {
+		var chartData = {
+			labels: countries,  // Ülkeler
+			datasets: [{
+				data: prevalenceRates,  // Prevalans oranları
+				backgroundColor: colors,  // Pastel renkler
+				borderColor: colors,  // Kenar renkleri için aynı pastel renkler
+				borderWidth: 1,
+				fill: 'origin',
+				label: "Diyabet Görülme Oranı"
+			}]
+		};
+
+		var chartOptions = {
+			responsive: true,
+			maintainAspectRatio: true,
+			legend: {
+				display: true
+			},
+			animation: {
+				animateScale: true,
+				animateRotate: true
+			}
+		};
+
+		var salesChartCanvas = $("#country-chart").get(0).getContext("2d");
+
+		var salesChart = new Chart(salesChartCanvas, {
+			type: 'pie', 
+			data: chartData,
+			options: chartOptions
+		});
+	}
+</script>
+
+
+<script>
+	var diseasesData = @Html.Raw(Json.Serialize(Model.Last5YearsDiseases));
+
+	var years = Array.from(new Set(diseasesData.map(x => x.year)));
+	var diseases = Array.from(new Set(diseasesData.map(x => x.diseaseName)));
+
+	var diseaseTranslations = {
+		"Cholera": "Kolera",
+		"Dengue": "Dang Humması",
+	};
+
+	var datasets = diseases.map(disease => {
+		var translatedDisease = diseaseTranslations[disease] || disease;
+		var data = years.map(year => {
+			var record = diseasesData.find(x => x.diseaseName === disease && x.year === year);
+			return record ? record.prevalenceRate : 0;
+		});
+
+		return {
+			label: translatedDisease,
+			data: data,
+			backgroundColor: getPastelColor(),
+			borderColor: getPastelColor(),
+			borderWidth: 1,
+		};
+	});
+
+	if ($("#lastdiseases-chart").length) {
+		var chartData = {
+			labels: years,
+			datasets: datasets,
+		};
+
+		var chartOptions = {
+			responsive: true,
+			maintainAspectRatio: false,
+			scales: {
+				x: {
+					title: {
+						display: true,
+						text: 'Yıl',
+					},
+					grid: {
+						display: false,
+					},
+				},
+				y: {
+					title: {
+						display: true,
+						text: 'Prevalans Oranı (%)',
+					},
+					beginAtZero: true,
+				},
+			},
+			plugins: {
+				tooltip: {
+					callbacks: {
+						label: function(context) {
+							return `${context.dataset.label}: ${context.raw}%`;
+						},
+					},
+				},
+			},
+			datasets: {
+				bar: {
+					barPercentage: 0.8,
+					categoryPercentage: 0.9,
+				},
+			},
+		};
+
+		var diseaseChartCanvas = $("#lastdiseases-chart").get(0).getContext("2d");
+		new Chart(diseaseChartCanvas, {
+			type: 'bar',
+			data: chartData,
+			options: chartOptions,
+		});
+	}
+
+	function getPastelColor() {
+		var r = Math.floor(Math.random() * 128 + 127);
+		var g = Math.floor(Math.random() * 128 + 127);
+		var b = Math.floor(Math.random() * 128 + 127);
+		return `rgb(${r}, ${g}, ${b})`;
+	}
+</script>
+
+<script>
+	var diseasesData = @Html.Raw(Json.Serialize(Model.MostCommonLast5YearsDiseases));
+
+	// Yıllar ve hastalıklar için benzersiz değerler oluşturuluyor
+	var years = Array.from(new Set(diseasesData.map(x => x.year))).sort(); // Yıllar sıralanacak
+	var diseases = Array.from(new Set(diseasesData.map(x => x.diseaseName)));
+
+	// Hastalık isimlerinin çevirileri
+	var diseaseTranslations = {
+		"Cholera": "Kolera",
+		"Dengue": "Dang Humması",
+		"Cancer": "Kanser",
+		"Diabetes": "Diyabet",
+		"Malaria": "Sıtma",
+		"Tuberculosis": "Tüberküloz",
+		"Measles": "Kızamık",
+		"Leprosy": "Cüzzam",
+		"Parkinson's Disease": "Parkinson",
+		"Polio": "Çocuk Felci",
+		"Alzheimer's Disease": "Alzheimer",
+		"Asthma": "Astım",
+		"Influenza": "Grip",
+		"Rabies": "Kuduz",
+		"Hypertension": "Hipertansiyon",
+		"Hepatitis": "Hepatit",
+	};
+
+	// Datasetleri oluşturuyoruz (her hastalık için veri seti)
+	var datasets = diseases.map(disease => {
+		var translatedDisease = diseaseTranslations[disease] || disease;
+		var data = years.map(year => {
+			var record = diseasesData.find(x => x.diseaseName === disease && x.year === year);
+			return record ? record.avgMortalityRate : 0; // Burada prevalans yerine ortalama ölüm oranı kullanılıyor
+		});
+
+		return {
+			label: translatedDisease,
+			data: data,
+			backgroundColor: getPastelColor(),
+			borderColor: getPastelColor(),
+			borderWidth: 2, // Çizgi kalınlığı artırıldı
+			pointRadius: 5, // Radar noktalarının büyüklüğü artırıldı
+			pointHoverRadius: 7, // Hover sırasında nokta büyüklüğü
+			fill: true, // Grafik içini dolduracak
+		};
+	});
+
+	// Chart.js grafiği oluşturuluyor
+	if ($("#lastyeardiseases-chart").length) {
+		var chartData = {
+			labels: years,
+			datasets: datasets,
+		};
+
+		var chartOptions = {
+			responsive: true,
+			maintainAspectRatio: false,
+			scales: {
+				r: { // Radar grafiği için eksen ayarları
+					angleLines: {
+						display: true, // Çizgi açılarının görünmesini sağlar
+						lineWidth: 2, // Çizgi kalınlığı
+					},
+					grid: {
+						color: 'rgba(0, 0, 0, 0.1)', // Çizgi rengi
+						lineWidth: 2, // Grid çizgilerinin kalınlığı
+					},
+					ticks: {
+						display: true,
+						min: 0, // Başlangıç noktası
+						max: 100, // Maksimum değer
+						stepSize: 20, // Adım büyüklüğü
+						beginAtZero: true,
+					},
+				}
+			},
+			plugins: {
+				tooltip: {
+					callbacks: {
+						label: function(context) {
+							return `${context.dataset.label}: ${context.raw}%`; // Tooltip üzerinde % işareti
+						},
+					},
+				},
+			},
+		};
+
+		var diseaseChartCanvas = $("#lastyeardiseases-chart").get(0).getContext("2d");
+		new Chart(diseaseChartCanvas, {
+			type: 'radar', // Grafik türü radar
+			data: chartData,
+			options: chartOptions,
+		});
+	}
+
+	// Pastel renk oluşturma fonksiyonu
+	function getPastelColor() {
+		var r = Math.floor(Math.random() * 128 + 127);
+		var g = Math.floor(Math.random() * 128 + 127);
+		var b = Math.floor(Math.random() * 128 + 127);
+		return `rgb(${r}, ${g}, ${b})`; // Pastel renk için RGB değerleri
+	}
+</script>
+
 

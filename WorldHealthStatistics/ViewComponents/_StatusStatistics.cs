@@ -29,8 +29,6 @@ namespace WorldHealthStatistics.ViewComponents
 
 			var mostCommonDiseaseCategoryInWorldWithUrbanization = await _statisticsRepository.GetMostCommonDiseaseCategoryByWorldWithUrbanization();
 
-			var mostCommonDiseasesByWorldWithAgeGroup = await _statisticsRepository.GetMostCommonDiseasesByWorldWithAgeGroup();
-
 			var mostCommonDiseasesByAgeGroup = await _statisticsRepository.GetMostCommonDiseasesByAgeGroup();
 
 			var viewModel = new StatusStatisticsViewModel
@@ -43,7 +41,6 @@ namespace WorldHealthStatistics.ViewComponents
 				MostCommonDiseaseInWorld= mostCommonDiseaseInWorld,
 				LeastCommonDiseaseInWorldWithCost=leastCommonDiseaseInWorldWithCost,
 				MostCommonDiseaseCategoryInWorldWithUrbanization=mostCommonDiseaseCategoryInWorldWithUrbanization,
-				MostCommonDiseasesByWorldWithAgeGroup = mostCommonDiseasesByWorldWithAgeGroup,
 				MostCommonDiseasesByAgeGroup= mostCommonDiseasesByAgeGroup,
 			};
 			return View(viewModel); 

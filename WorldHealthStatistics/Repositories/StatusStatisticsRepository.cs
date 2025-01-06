@@ -124,19 +124,6 @@ namespace WorldHealthStatistics.Repositories
 			return result.ToList();
 		}
 
-		public async Task<ResultStatisticsDto> GetMostCommonDiseasesByWorldWithAgeGroup()
-		{
-			string query = @"SELECT TOP 1 DiseaseName,
-							 SUM(CAST(PopulationAffected AS BIGINT)) AS TotalAffected
-							 FROM HealthData
-                             WHERE AgeGroup = '0-18'
-                             GROUP BY DiseaseName
-                             ORDER BY TotalAffected DESC;
-                            ";
-			var result=await _connection.QueryFirstOrDefaultAsync<ResultStatisticsDto>(query);
-			return result;
-		}
-
 		public async Task<List<ResultStatisticsDto>> GetMostCommonDiseasesByAgeGroup()
 		{
 			string query = @"WITH RankedDiseases AS (

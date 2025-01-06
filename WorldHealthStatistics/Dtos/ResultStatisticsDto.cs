@@ -39,6 +39,8 @@ namespace WorldHealthStatistics.Dtos
 		public decimal Frequency { get; set; }
 		public decimal AvgCostOfHiv { get; set; }
 		public decimal TotalAffected { get; set; }
+		public decimal TotalPrevalenceRate { get; set; }
+		public decimal Rank { get; set; }
 
 	}
 }

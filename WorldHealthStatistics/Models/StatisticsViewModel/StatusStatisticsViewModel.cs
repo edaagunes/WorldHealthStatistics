@@ -12,7 +12,6 @@ namespace WorldHealthStatistics.Models.StatisticsViewModel
 		public ResultStatisticsDto MostCommonDiseaseInWorld { get; set; }
 		public ResultStatisticsDto LeastCommonDiseaseInWorldWithCost { get; set; }
 		public List<ResultStatisticsDto> MostCommonDiseaseCategoryInWorldWithUrbanization { get; set; }
-		public ResultStatisticsDto MostCommonDiseasesByWorldWithAgeGroup { get; set; }
 		public List<ResultStatisticsDto> MostCommonDiseasesByAgeGroup { get; set; }
 	}
 }
